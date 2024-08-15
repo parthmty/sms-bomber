@@ -1,0 +1,12 @@
+.numberInputSection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.numberInputSection > label {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 600;
+}

@@ -1,0 +1,41 @@
+.title {
+  color: #b8c1ee;
+  font-size: 56px;
+  font-weight: 800;
+  position: relative;
+  margin-top: 40px;
+}
+
+.title::before {
+  content: attr(data-status);
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #ccb040;
+  padding: 3px 5px;
+  border-radius: 4px;
+  color: #362e0e;
+  position: absolute;
+  top: -20px;
+  right: 0px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.toastContainer {
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 20px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column-reverse;
+}
+
+.inactive {
+  pointer-events: none;
+}

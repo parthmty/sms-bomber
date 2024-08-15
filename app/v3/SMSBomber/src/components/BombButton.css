@@ -1,0 +1,61 @@
+.bombButton {
+  margin-top: 5px;
+  background: url(../assets/noise-light.png) #6a40cc;
+  background-size: cover;
+  border: none;
+  padding: 14px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+.bombButton:hover,
+.bombButton:focus {
+  background-color: #5530aa;
+  cursor: pointer;
+  outline: 2px solid #c5aff9;
+}
+
+.bombing,
+.bombing:hover,
+.bombing:focus {
+  background: #232323
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 1rem,
+      #78787822 1rem,
+      #78787822 2rem
+    );
+  position: relative;
+  color: #6b6b6b;
+  background-size: 200% 200%;
+  animation: barberpole 10s linear infinite;
+}
+
+.bombing::after {
+  content: "";
+  background: url(../assets/noise-light.png);
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 8px;
+}
+
+.bombing:hover,
+.bombing:focus {
+  outline: none;
+  border: none;
+  cursor: wait;
+}
+
+@keyframes barberpole {
+  100% {
+    background-position: 100% 100%;
+  }
+}

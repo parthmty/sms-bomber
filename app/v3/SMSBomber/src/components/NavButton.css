@@ -1,0 +1,31 @@
+.navButton {
+  display: flex;
+  background-color: rgba(64, 64, 64, 0.39);
+  gap: 10px;
+  align-self: center;
+  padding: 8px 18px;
+  margin-top: 40px;
+  border-radius: 1000px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navButton:hover {
+  background-color: rgba(81, 81, 81, 0.5);
+}
+
+.navButtonIcon {
+  height: 18px;
+  width: 14px;
+}
+
+.navButtonIcon img {
+  height: 100%;
+  fill: aqua;
+}
+
+.navButtonText {
+  font-size: 14px;
+  color: #d6d6d6;
+  font-weight: 400;
+}

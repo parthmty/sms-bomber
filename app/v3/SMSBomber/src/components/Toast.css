@@ -1,0 +1,144 @@
+.toastBox {
+  display: flex;
+  background-color: aliceblue;
+  position: relative;
+  padding: 18px 18px 12px;
+  width: 90vw;
+  max-width: 500px;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  overflow: hidden;
+  animation: bubbleHide 10s linear forwards;
+}
+
+.toastBox h3 {
+  font-size: 16px;
+}
+
+.toastBox p {
+  font-size: 14px;
+}
+
+.toastBox button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  height: 100%;
+}
+
+.toastBox button svg {
+  height: 40px;
+  pointer-events: none;
+}
+
+.toastSuccess::after,
+.toastError::after,
+.toastInfo::after,
+.toastWarning::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  animation: toastSlideIn 10s linear forwards;
+}
+
+/* Toast Type: Success  */
+.toastSuccess {
+  background-color: hsl(130, 23%, 21%);
+  color: hsl(131, 78%, 75%);
+}
+
+.toastSuccess svg .svgCross {
+  fill: hsl(131, 78%, 75%);
+}
+
+.toastSuccess svg .svgCrossBg {
+  fill: hsl(130, 23%, 16%);
+}
+
+.toastSuccess::after {
+  background-color: hsl(131, 78%, 75%);
+}
+
+/* Toast Type: Error  */
+.toastError {
+  background-color: hsl(0, 31%, 23%);
+  color: hsl(0, 83%, 86%);
+}
+
+.toastError svg .svgCross {
+  fill: hsl(0, 83%, 86%);
+}
+
+.toastError svg .svgCrossBg {
+  fill: hsl(0, 31%, 18%);
+}
+
+.toastError::after {
+  background-color: hsl(0, 83%, 86%);
+}
+
+/* Toast Type: Info  */
+.toastInfo {
+  background-color: hsl(205, 45%, 22%);
+  color: hsl(205, 95%, 85%);
+}
+
+.toastInfo svg .svgCross {
+  fill: hsl(205, 95%, 85%);
+}
+
+.toastInfo svg .svgCrossBg {
+  fill: hsl(205, 45%, 18%);
+}
+
+.toastInfo::after {
+  background-color: hsl(205, 95%, 85%);
+}
+
+/* Toast Type: Warning  */
+.toastWarning {
+  background-color: hsl(45, 48%, 23%);
+  color: hsl(45, 90%, 88%);
+}
+
+.toastWarning svg .svgCross {
+  fill: hsl(45, 90%, 88%);
+}
+
+.toastWarning svg .svgCrossBg {
+  fill: hsl(45, 48%, 18%);
+}
+
+.toastWarning::after {
+  background-color: hsl(45, 90%, 88%);
+}
+
+@keyframes toastSlideIn {
+  0% {
+    width: 100%;
+  }
+  98% {
+    width: 0%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes bubbleHide {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

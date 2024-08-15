@@ -1,0 +1,33 @@
+{
+    "name": "SMS Bomber v0.2 - Beta",
+    "short_name": "SMS Bomber",
+    "start_url": "/",
+    "display": "standalone",
+    "description": "A simple SMS Bombing app",
+    "dir": "auto",
+    "theme_color": "#000000",
+    "background_color": "#000000",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "https://www.pwabuilder.com/assets/icons/icon_512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "https://www.pwabuilder.com/assets/icons/icon_192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ],
+    "prefer_related_applications": false,
+    "shortcuts": [
+        {
+            "name": "SMS Bomber",
+            "url": "/",
+            "description": "A simple SMS Bombing app"
+        }
+    ]
+}

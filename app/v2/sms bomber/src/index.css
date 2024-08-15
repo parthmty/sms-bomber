@@ -1,0 +1,177 @@
+@font-face {
+  font-family: 'Product Sans';
+  src: local('Product Sans Bold'), local('ProductSans-Bold'),
+    url('assets/fonts/subset-ProductSans-Bold.woff2') format('woff2'),
+    url('assets/fonts/subset-ProductSans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Product Sans';
+  src: local('Product Sans'), local('ProductSans-Regular'),
+    url('assets/fonts/subset-ProductSans-Regular.woff2') format('woff2'),
+    url('assets/fonts/subset-ProductSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                        supported by Chrome, Edge, Opera and Firefox */
+
+}
+
+
+:root {
+  font-family: 'Product Sans', sans-serif;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Color styles */
+    --primary: rgba(82, 101, 37, 1);
+    --on-primary: rgba(255, 255, 255, 1);
+    --primary-container: rgba(213, 236, 157, 1);
+    --on-primary-container: rgba(21, 31, 0, 1);
+    --secondary: rgba(90, 97, 71, 1);
+    --on-secondary: rgba(255, 255, 255, 1);
+    --secondary-container: rgba(223, 230, 197, 1);
+    --on-secondary-container: rgba(24, 30, 9, 1);
+    --tertiary: rgba(57, 102, 95, 1);
+    --on-tertiary: rgba(255, 255, 255, 1);
+    --tertiary-container: rgba(188, 236, 227, 1);
+    --on-tertiary-container: rgba(0, 32, 28, 1);
+    --error: rgba(186, 26, 26, 1);
+    --on-error: rgba(255, 255, 255, 1);
+    --error-container: rgba(255, 218, 214, 1);
+    --on-error-container: rgba(65, 0, 2, 1);
+    --background: rgba(250, 250, 238, 1);
+    --on-background: rgba(27, 28, 21, 1);
+    --surface: rgba(250, 250, 238, 1);
+    --on-surface: rgba(27, 28, 21, 1);
+    --surface-variant: rgba(226, 228, 212, 1);
+    --on-surface-variant: rgba(69, 72, 60, 1);
+    --outline: rgba(118, 120, 107, 1);
+    --outline-variant: rgba(198, 200, 184, 1);
+    --shadow: rgba(0, 0, 0, 1);
+    --scrim: rgba(0, 0, 0, 1);
+    --inverse-surface: rgba(47, 49, 41, 1);
+    --inverse-on-surface: rgba(242, 241, 229, 1);
+    --inverse-primary: rgba(185, 207, 131, 1);
+    --primary-fixed: rgba(213, 236, 157, 1);
+    --on-primary-fixed: rgba(21, 31, 0, 1);
+    --primary-fixed-dim: rgba(185, 207, 131, 1);
+    --on-primary-fixed-variant: rgba(59, 77, 15, 1);
+    --secondary-fixed: rgba(223, 230, 197, 1);
+    --on-secondary-fixed: rgba(24, 30, 9, 1);
+    --secondary-fixed-dim: rgba(195, 202, 170, 1);
+    --on-secondary-fixed-variant: rgba(67, 74, 49, 1);
+    --tertiary-fixed: rgba(188, 236, 227, 1);
+    --on-tertiary-fixed: rgba(0, 32, 28, 1);
+    --tertiary-fixed-dim: rgba(161, 208, 199, 1);
+    --on-tertiary-fixed-variant: rgba(32, 78, 72, 1);
+    --surface-dim: rgba(219, 219, 207, 1);
+    --surface-bright: rgba(250, 250, 238, 1);
+    --surface-container-lowest: rgba(255, 255, 255, 1);
+    --surface-tint: rgba(82, 101, 37, 1);
+    --surface-container: rgba(239, 239, 226, 1);
+    --surface-container-high: rgba(233, 233, 221, 1);
+    --surface-container-highest: rgba(227, 227, 215, 1);
+    --surface-container-low: rgba(244, 244, 232, 1);
+
+    /* Effect styles */
+    --el1: 0px 1px 3px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Color styles */
+    --primary: rgba(185, 207, 131, 1);
+    --surface-tint: rgba(185, 207, 131, 1);
+    --on-primary: rgba(39, 53, 0, 1);
+    --primary-container: rgba(59, 77, 15, 1);
+    --on-primary-container: rgba(213, 236, 157, 1);
+    --secondary: rgba(195, 202, 170, 1);
+    --on-secondary: rgba(44, 51, 28, 1);
+    --secondary-container: rgba(67, 74, 49, 1);
+    --on-secondary-container: rgba(223, 230, 197, 1);
+    --tertiary: rgba(161, 208, 199, 1);
+    --on-tertiary: rgba(2, 55, 49, 1);
+    --tertiary-container: rgba(32, 78, 72, 1);
+    --on-tertiary-container: rgba(188, 236, 227, 1);
+    --error: rgba(255, 180, 171, 1);
+    --on-error: rgba(105, 0, 5, 1);
+    --error-container: rgba(147, 0, 10, 1);
+    --on-error-container: rgba(255, 218, 214, 1);
+    --background: rgba(18, 20, 13, 1);
+    --surface: rgba(18, 20, 13, 1);
+    --on-surface: rgba(227, 227, 215, 1);
+    --surface-variant: rgba(69, 72, 60, 1);
+    --on-surface-variant: rgba(198, 200, 184, 1);
+    --outline: rgba(144, 146, 132, 1);
+    --outline-variant: rgba(69, 72, 60, 1);
+    --shadow: rgba(0, 0, 0, 1);
+    --scrim: rgba(0, 0, 0, 1);
+    --inverse-surface: rgba(227, 227, 215, 1);
+    --inverse-on-surface: rgba(47, 49, 41, 1);
+    --on-background: rgba(227, 227, 215, 1);
+    --primary-fixed: rgba(213, 236, 157, 1);
+    --on-primary-fixed: rgba(21, 31, 0, 1);
+    --primary-fixed-dim: rgba(185, 207, 131, 1);
+    --on-primary-fixed-variant: rgba(59, 77, 15, 1);
+    --inverse-primary: rgba(82, 101, 37, 1);
+    --on-secondary-fixed: rgba(24, 30, 9, 1);
+    --secondary-fixed-dim: rgba(195, 202, 170, 1);
+    --secondary-fixed: rgba(223, 230, 197, 1);
+    --on-secondary-fixed-variant: rgba(67, 74, 49, 1);
+    --tertiary-fixed: rgba(188, 236, 227, 1);
+    --on-tertiary-fixed: rgba(0, 32, 28, 1);
+    --tertiary-fixed-dim: rgba(161, 208, 199, 1);
+    --on-tertiary-fixed-variant: rgba(32, 78, 72, 1);
+    --surface-dim: rgba(18, 20, 13, 1);
+    --surface-bright: rgba(56, 58, 50, 1);
+    --surface-container-lowest: rgba(13, 15, 8, 1);
+    --surface-container-low: rgba(27, 28, 21, 1);
+    --surface-container: rgba(31, 32, 25, 1);
+    --surface-container-high: rgba(41, 43, 35, 1);
+    --surface-container-highest: rgba(52, 54, 45, 1);
+
+
+    /* Effect styles */
+    --el1: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 1px 3px rgba(0, 0, 0, 0.15);
+
+  }
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: var(--surface-container);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}

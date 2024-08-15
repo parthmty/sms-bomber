@@ -1,0 +1,14 @@
+name: SMS Bomber CLI
+on:
+    repository_dispatch:
+        types: [bombit]
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+            - name: Install Requirements
+              run: pip3 install -r requirements.txt
+            - name: Run SMS Bomber CLI
+              run: python3 controller.py ${{ github.event.client_payload.phone_number }} ${{ github.event.client_payload.count }} ${{ github.event.client_payload.delay }}

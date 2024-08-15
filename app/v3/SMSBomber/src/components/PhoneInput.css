@@ -1,0 +1,47 @@
+.phoneInputBox {
+  display: flex;
+  background-color: #2b2b2b;
+  padding: 12px 15px;
+  width: 100%;
+  border-radius: 8px;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.phoneInputBox > img {
+  height: 22px;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.phoneInputBox > span {
+  color: #9c9c9c;
+  font-weight: 600;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.phoneInputBox > input {
+  flex: 1;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #cacaca;
+  font-weight: 600;
+  font-size: 16px;
+  /* letter-spacing: 5px; */
+}
+
+.phoneInputBox:focus-within {
+  outline: 2px solid #656565;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}

@@ -1,0 +1,33 @@
+.numberInputBox {
+  display: flex;
+  background-color: #2b2b2b;
+  padding: 14px 15px;
+  width: 80px;
+  border-radius: 8px;
+  gap: 5px;
+  justify-content: center;
+  align-items: end;
+}
+
+.numberInputBox > input {
+  font-size: 16px;
+  height: 16px;
+  line-height: 16px;
+  font-weight: 600;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #e0e0e0;
+}
+
+.numberInputBox > label {
+  font-size: 16px;
+  height: 16px;
+  line-height: 16px;
+  color: #7c7c7c;
+}
+
+.numberInputBox:focus-within {
+  outline: 2px solid #656565;
+}

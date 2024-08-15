@@ -1,0 +1,300 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                        supported by Chrome, Edge, Opera and Firefox */
+
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+
+/* ---------------------------------------------------------- */
+
+body {
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Component: Screen */
+.screen {
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    max-width: 500px;
+    max-height: 700px;
+    min-width: 300px;
+    min-height: 400px;
+    padding: 40px 30px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+}
+
+/* Component: Step Label */
+.step-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid #C2C2C2;
+    padding: 4px 20px;
+    border-radius: 1000px;
+    color: #363636;
+}
+
+/* Component: Step Title */
+.step-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+/* Component: Phone Box */
+.phone-box {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: #F2F2F2;
+    padding: 0 20px;
+    border-radius: 8px;
+    gap: 10px;
+    margin-top: 40px;
+    position: relative;
+}
+
+.p-warn {
+    outline: 2px solid red;
+}
+
+.phone-box::after {
+    content: attr(data-warning);
+    width: 100%;
+    font-size: 0.8rem;
+    padding: 10px 0 0 10px;
+    color: rgb(255, 0, 0);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+}
+
+.phone-box img {
+    height: 24px;
+    border-radius: 4px;
+}
+
+.p-separator {
+    width: 0;
+    height: 16px;
+    border-left: 1px solid #D5D5D5;
+}
+
+.p-prefix {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #575757;
+}
+
+.p-number {
+    font-size: 1rem;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    background: none;
+    margin-left: -5px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+
+/* Component: Step Button */
+.step-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3A67DA;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 1000px;
+    align-self: center;
+    position: absolute;
+    bottom: 40px;
+    cursor: pointer;
+    padding: 10px 40px;
+}
+
+/* Disabled */
+.step-button:disabled {
+    background-color: #C2C2C2;
+    cursor: not-allowed;
+}
+
+.step-button:not(:disabled):hover {
+    background-color: #3258b7;
+}
+
+/* Component: Counter */
+.count-box {
+    align-self: center;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.c-increment,
+.c-decrement {
+    outline: none;
+    border: none;
+    background: none;
+    border-radius: 1000px;
+    cursor: pointer;
+    height: 60px;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: none;
+}
+
+.c-count {
+    font-size: 60px;
+    font-weight: 700;
+    margin: 0 20px;
+}
+
+/* Component: Result */
+.res-success,
+.res-fail {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 40px;
+    text-align: center;
+    align-self: center;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-100%);
+}
+
+.res-fail img,
+.res-success img {
+    height: 80px;
+}
+
+.success .res-success {
+    display: flex;
+}
+
+.fail .res-fail {
+    display: flex;
+}
+
+
+.bombingImage {
+    align-self: center;
+    position: absolute;
+    top: calc(50% - 40px);
+    transform: translateY(-50%);
+}
+
+/* Screen Switching */
+.a .sc-a {
+    display: flex;
+}
+
+.b .sc-b {
+    display: flex;
+}
+
+.c .sc-c {
+    display: flex;
+}
+
+.d .sc-d {
+    display: flex;
+}
